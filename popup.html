@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoiceClone</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI se Baat Karein!</h1>
+        <p>Press the Start Recording button and read the given line:</p>
+        <p>A lone butterfly danced among them, painting the air with color.</p>
+        <button id="start-record-btn"><i class="fas fa-microphone"></i> Start Recording</button>
+        <div id="request">Your request will be displayed here.</div>
+        <div id="response">Your response will be displayed here.</div>
+        <button id="generate-btn">Generate Response</button>
+        <div class="button-container">
+            <button id="speak-button"><i class="fas fa-play"></i> Play</button>
+            <button id="pause-button"><i class="fas fa-pause"></i> Pause</button>
+            <button id="resume-button"><i class="fas fa-redo"></i> Resume</button>
+        </div>
+    </div>
+    <script src="stt.js"></script>
+    <script src="tts.js"></script>
+    <script src="response.js"></script>
+</body>
+</html>
