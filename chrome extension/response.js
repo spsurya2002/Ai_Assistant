@@ -6,13 +6,18 @@ document.getElementById('generate-btn').addEventListener('click', async function
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            Authorization: `Bearer <api_key>`
+            Authorization: `Bearer <your_groq_api_key>`
         },
         body: JSON.stringify({
             messages: [
                 {
                     role: 'system',
-                    content: `You are a multi-modal AI voice assistant...`
+                    content:
+                        `You are a multi-modal AI voice assistant. Your user may or may not have attached a photo for context 
+                        (either a screenshot or a webcam capture). Any photo has already been processed into a highly detailed 
+                        text prompt that will be attached to their transcribed voice prompt. Generate the most useful and factual 
+                        response possible, carefully considering all previous generated text in your response before adding new tokens 
+                        to the response...in minimum 3 lines.'`
                 },
                 {
                     role: 'user',
@@ -29,6 +34,8 @@ document.getElementById('generate-btn').addEventListener('click', async function
 
     if (response.ok) {
         const data = await response.json();
+        console.log(data.choices[0].message?.content, '<---- groq.com api');
+
         const answer = data.choices[0].message?.content;
         const responseDiv = document.getElementById('response');
         responseDiv.innerHTML = answer;
