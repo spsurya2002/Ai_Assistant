@@ -14,9 +14,10 @@ Playback Controls: Includes play, pause, and resume buttons for controlling the 
 Download or clone this repository to your local machine.
 Open Chrome and navigate to chrome://extensions/.
 Enable Developer Mode using the toggle switch in the top right corner.
-Click the Load Unpacked button and select the directory where this extension is located.
+Click the Load Unpacked button and select the "chrome extension" directory where this extension is located.
 The extension will be added to Chrome, and the icon will appear in the toolbar.
-Usage
+
+## Usage
 Click on the extension icon in the toolbar to start.
 Press the Start Listening button to activate speech recognition.
 Once you finish speaking, the transcribed text will automatically be sent to the Groq LLM for processing.
